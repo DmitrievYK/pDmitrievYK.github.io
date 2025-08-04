@@ -1,110 +1,101 @@
-/* ------------------------------------------------------------------- 
- * ## fonts 
- * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+ body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-:root {
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-    --font-1 : "Public Sans", sans-serif;
-    --font-2 : "DM Serif Display", serif;
+    header h1 {
+      margin: 0;
+    }
 
-    /* monospace
-    */
-    --font-mono : Consolas, "Andale Mono", Courier, "Courier New", monospace;
-}
-/* ------------------------------------------------------------------- 
- * ## colors
- * ------------------------------------------------------------------- */
-:root {
+    nav {
+      margin-top: 10px;
+    }
 
-    /* color-1(#eabe7c)
-     * color-2(#23967f)
-     */
-    --color-1 : hsla(36, 72%, 70%, 1);
-    --color-2 : hsla(168, 62%, 36%, 1);
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-    /* theme color variations
-     */
-    --color-1-lighter : hsla(36, 72%, 90%, 1);
-    --color-1-light   : hsla(36, 72%, 80%, 1);
-    --color-1-dark    : hsla(36, 72%, 60%, 1);
-    --color-1-darker  : hsla(36, 72%, 50%, 1);
-    --color-2-lighter : hsla(168, 62%, 56%, 1);
-    --color-2-light   : hsla(168, 62%, 46%, 1);
-    --color-2-dark    : hsla(168, 62%, 26%, 1);
-    --color-2-darker  : hsla(168, 62%, 16%, 1);
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-    /* feedback colors
-     * color-error(#ffd1d2), color-success(#c8e675), 
-     * color-info(#d7ecfb), color-notice(#fff099)
-     */
-    --color-error           : hsla(359, 100%, 91%, 1);
-    --color-success         : hsla(76, 69%, 68%, 1);
-    --color-info            : hsla(205, 82%, 91%, 1);
-    --color-notice          : hsla(51, 100%, 80%, 1);
-    --color-error-content   : hsla(359, 50%, 50%, 1);
-    --color-success-content : hsla(76, 29%, 28%, 1);
-    --color-info-content    : hsla(205, 32%, 31%, 1);
-    --color-notice-content  : hsla(51, 30%, 30%, 1);
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-    /* shades 
-     * generated using 
-     * Tint & Shade Generator 
-     * (https://maketintsandshades.com/)
-     */
-    --color-black   : #000000;
-    --color-gray-19 : #020202;
-    --color-gray-18 : #040404;
-    --color-gray-17 : #060607;
-    --color-gray-16 : #080809;
-    --color-gray-15 : #0a0b0b;
-    --color-gray-14 : #0c0d0d;
-    --color-gray-13 : #0e0f0f;
-    --color-gray-12 : #101112;
-    --color-gray-11 : #121314;
-    --color-gray-10 : #141516;
-    --color-gray-9  : #2c2c2d;
-    --color-gray-8  : #434445;
-    --color-gray-7  : #5b5b5c;
-    --color-gray-6  : #727373;
-    --color-gray-5  : #8a8a8b;
-    --color-gray-4  : #a1a1a2;
-    --color-gray-3  : #b9b9b9;
-    --color-gray-2  : #d0d0d0;
-    --color-gray-1  : #e8e8e8;
-    --color-white   : #ffffff;
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
 
-    /* text
-     */
-    --color-text        : var(--color-gray-4);
-    --color-text-dark   : var(--color-white);
-    --color-text-light  : var(--color-gray-7);
-    --color-placeholder : var(--color-gray-7);
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-    /* buttons
-     */
-    --color-btn                    : var(--color-gray-9);
-    --color-btn-text               : var(--color-1);
-    --color-btn-hover              : var(--color-white);
-    --color-btn-hover-text         : var(--color-black);
-    --color-btn-primary            : var(--color-1-dark);
-    --color-btn-primary-text       : var(--color-black);
-    --color-btn-primary-hover      : var(--color-1-darker);
-    --color-btn-primary-hover-text : var(--color-black);
-    --color-btn-stroke             : var(--color-white);
-    --color-btn-stroke-text        : var(--color-white);
-    --color-btn-stroke-hover       : var(--color-white);
-    --color-btn-stroke-hover-text  : var(--color-black);
+    .project {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 40px);
+      box-sizing: border-box;
+    }
 
-    /* preloader
-     */
-    --color-preloader-bg : var(--color-gray-10);
-    --color-loader       : white;
-    --color-loader-light : rgba(255, 255, 255, 0.1);
+    .project h3 {
+      margin-top: 0;
+    }
 
-    /* others
-     */
-    --color-body    : var(--color-gray-10);
-    --color-border  : rgba(255, 255, 255, .05);
-    --border-radius : 3px;
-}
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px 20px;
+      margin-top: 40px;
+    }
+
+    /* Адаптивность */
+    @media(max-width:768px){
+      .projects {
+        flex-direction: column;
+      }
+      
+      .project {
+        flex: 1 1 auto;
+        width:auto; 
+        max-width:none; 
+        margin-bottom:20px; 
+      }
+      
+     }
+    
+     /* Кнопка */
+     .btn {
+       display:inline-block; 
+       padding:10px 20px; 
+       background-color:#222; 
+       color:#fff; 
+       text-decoration:none; 
+       border-radius:5px; 
+       transition:.3s all; 
+     }
+     
+     .btn:hover{
+       background-color:#555; 
+     }
+
