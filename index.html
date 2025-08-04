@@ -1,70 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Портфолио -> Дмитриев Юрий</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мое портфолио</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-    <!-- Разрешение экрана для мобильных устройств -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 40px);
+      box-sizing: border-box;
+    }
+
+    .project h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px 20px;
+      margin-top: 40px;
+    }
+
+    /* Адаптивность */
+    @media(max-width:768px){
+      .projects {
+        flex-direction: column;
+      }
+      
+      .project {
+        flex: 1 1 auto;
+        width:auto; 
+        max-width:none; 
+        margin-bottom:20px; 
+      }
+      
+     }
     
-    <!-- CSS стили путь -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- favicon иконка сайта -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+     /* Кнопка */
+     .btn {
+       display:inline-block; 
+       padding:10px 20px; 
+       background-color:#222; 
+       color:#fff; 
+       text-decoration:none; 
+       border-radius:5px; 
+       transition:.3s all; 
+     }
+     
+     .btn:hover{
+       background-color:#555; 
+     }
+     
+   </style>
 </head>
+<body>
 
-<body id="top">
+<header>
+  <h1>Мое портфолио</h1>
+  <nav>
+    <a href="#about">Обо мне</a>
+    <a href="#projects">Проекты</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>Обо мне</h2>
+  <p>Здесь можно кратко рассказать о себе, своих навыках и опыте.</p>
+</section>
+
+<section id="projects">
+  <h2>Мои проекты</h2>
+  
+  <div class="projects">
     
-
-    <!-- # загрузка -->
-    <div id="preloader">
-        <div id="loader">
-        </div>
+    <div class="project">
+      <h3>Проект №1</h3>
+      <p>Описание проекта. Можно добавить ссылку на GitHub или демонстрацию.</p>
+      <a class="btn" href="#" target="_blank">Посмотреть проект</a>
     </div>
 
+    <div class="project">
+      <h3>Проект №2</h3>
+      <p>Описание проекта. Можно добавить ссылку на GitHub или демонстрацию.</p>
+     <a class="btn" href="#" target="_blank">Посмотреть проект</a>
+   </div>
 
-    <!-- # обертка страниц -->
-    <div class="s-pagewrap">
+   <!-- Добавляй свои проекты по аналогии -->
 
-        <div class="circles">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+ </div>
 
+</section>
 
-        <!-- ## Шапка сайта 
-        ================================================== -->
-        <header class="s-header">
+<section id="contacts">
+<h2>Контакты</h2>
+<p>Email: example@mail.com</p>
+<p>GitHub:
+<a href="https://github.com/твое_имя" target="_blank">https://github.com/твое_имя</a></p>
+<!-- Можно добавить форму или соцсети -->
+</section>
 
-            <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">Юрий.</a></span>
-                <a class="mobile-menu-toggle" href="#0"><span>Меню</span></a>
-            </div>
+<footer>
+<p>&copy; <?php echo date("Y"); ?> Мое имя. Все права защищены.</p>
+</footer>
 
-            <div class="row wide main-nav-wrap">
-                <nav class="column lg-12 main-nav">
-                    <ul>
-                        <li><a href="index.html" class="home-link">Юрий.</a></li>
-                        <li class="current"><a href="#intro" class="smoothscroll">Введение</a></li>
-                        <li><a href="#about" class="smoothscroll">Обо мне</a></li>
-                        <li><a href="#works" class="smoothscroll">Мои работы</a></li>
-                        <li><a href="#contact" class="smoothscroll">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
+<script>
+// Можно добавить небольшой скрипт для интерактивности
+// Например, плавный скролл или анимации
+document.querySelectorAll('nav a').forEach(link => {
+   link.addEventListener('click', function(e) {
+     e.preventDefault();
+     const targetId = this.getAttribute('href').slice(1);
+     document.getElementById(targetId).scrollIntoView({ behavior:'smooth' });
+   });
+});
+</script>
 
-        </header> <!-- Конец шапки сайта -->
+</body>
+</html>
 
     
 </body>
