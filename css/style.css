@@ -78,8 +78,8 @@
 
     #about .about-photo img {
       display: block;
-      width: 16,7%;         /* Ширина фото под макет */
-      height: 16,7%;
+      width: 200px;         /* Ширина фото под макет */
+      height: 487px;
       border-radius: 8px;   /* скругление углов */
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
      }
@@ -130,6 +130,7 @@
      .btn:hover{
        background-color:#555; 
      }
+
 
 
 
