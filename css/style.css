@@ -69,6 +69,38 @@
       margin-top: 40px;
     }
 
+    #about .about-container {
+      display: flex;
+      aligin-items: center;  /* Выравнивание по центру по вертикали */
+      gap: 20px;             /* Расстоение между фото и текстом */
+      flex-wrap: wrap;       /* Перенос компонентов на маленькие экраны */
+     }
+    #about .about-photo img {
+      display: block;
+      width: 200px;         /* Ширина фото под макет */
+      height: auto;
+      border-radius: 8px;   /* скругление углов */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+     }
+
+    #about .about-text {
+      flex: 1;             /* Текст занимает все доступное место рядом с фото */
+      min-width: 200px;    /* Минимальная ширина текста, выставляем чтоб небыло слишком узко */
+     }
+
+    /* адаптивность для очень узких экранов */
+    @media(max-width: 600px) {
+       #about .about-container {
+        flex-direction: column; /* Сначала фото, потом текст */
+        text-align: center;     /* текст по центру */
+       }
+
+      #about .about-photo img {
+       wigth: 150px;
+       margin: 0 auto;
+      }
+     }
+
     /* Адаптивность */
     @media(max-width:768px){
       .projects {
@@ -81,7 +113,6 @@
         max-width:none; 
         margin-bottom:20px; 
       }
-      
      }
     
      /* Кнопка */
@@ -98,4 +129,5 @@
      .btn:hover{
        background-color:#555; 
      }
+
 
